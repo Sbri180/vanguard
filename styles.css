@@ -112,6 +112,7 @@ button {
     color: var(--white);
     cursor: pointer;
     height: 3rem;
+    margin:auto;
 }
 #services {
     display: grid;
@@ -136,8 +137,32 @@ button {
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     overflow: hidden;
+    color: var(--white);
+}
+#innovation h2{
+    padding: 1rem;
+}
+#innovation p{
+    padding: 1.25rem;
+    font-size: 1.20rem;
+    line-height: 1.5rem;
+}
+#innovation .container {
+padding:10px;
+  backdrop-filter:blur(10px);
+  
+}
+#innovation button {
+    transition: all 100ms ease-in-out;
+}
+#innovation button:hover {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
