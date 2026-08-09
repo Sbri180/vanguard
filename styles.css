@@ -71,21 +71,24 @@ body {
     min-width: 400px;
 }
 h1{
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--blue);
     font-family: var(--font);
     font-weight: bold; 
 }
 h2{
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-family: var(--font);
     font-weight: bold;
+    padding: 2rem;
 }
 h3{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: var(--font);
     font-weight: bold;
     color: var(--white);
+    padding: 1rem 0;
+    padding-left: 1rem;
 }
 a {
     text-decoration: none;
@@ -130,41 +133,6 @@ button {
     margin: 0 auto;
 }
 
-/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- #innovation{
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 0.5rem;
-    overflow: hidden;
-    color: var(--white);
-}
-#innovation h2{
-    padding: 1rem;
-}
-#innovation p{
-    padding: 1.25rem;
-    font-size: 1.20rem;
-    line-height: 1.5rem;
-}
-#innovation .container {
-padding:10px;
-  backdrop-filter:blur(10px);
-  
-}
-#innovation button {
-    transition: all 100ms ease-in-out;
-}
-#innovation button:hover {
-    background-color: var(--red);
-    color: var(--white);
-    font-size: 1.25rem;
-    border-radius: 10px;
-    
-}
-
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
  h1::before {
     content: "";
@@ -175,7 +143,7 @@ padding:10px;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 
 }
-
+/* NAVIGATION STYLES */
 nav{
     position: relative;
     margin-left: auto;
@@ -247,18 +215,88 @@ label span:before {
 label span:after {
     top: -.75rem;
 }
-input {
+nav input {
   display:none;
 }
 /* ADDS HEIGHT THE NAV WHEN IT'S DROPPED DOWN */
-input:checked ~ ul {
+nav input:checked ~ ul {
     max-height: 500px;
 }
-/* LOCATION OF THE HAMBURGER */
-
-
-
-
+/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
+ #innovation{
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    overflow: hidden;
+    color: var(--white);
+}
+#innovation h2{
+    padding: 1rem;
+}
+#innovation p{
+    padding: 1.25rem;
+    font-size: 1.20rem;
+    line-height: 1.5rem;
+}
+#innovation .container {
+padding:10px;
+  backdrop-filter:blur(10px);
+  
+}
+#innovation button {
+   transition: all 100ms ease-in-out;
+}
+#innovation button:hover {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    
+}
+/*About Section*/
+#about{
+    margin: 0 auto;
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+/* Services Section */
+#services .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+#services .card {
+    background-color: var(--blue);
+    padding: 1rem;
+    border-radius: 10px;
+}
+/* Results Section */
+#results {
+  background-color: var(--blue);
+  margin: 0 auto;
+  color: var(--white);
+  padding: 1rem;
+}
+#results h3{
+    font-size: 2rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--black);
+    margin-bottom: auto;
+}
+table th, table td {
+    border: 1px solid var(--charcoal);
+    padding: 0.5rem;
+    text-align: center;
+}
+tbody tr:nth-child(even) {
+    background-color: var(--charcoal);
+}
 
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -306,9 +344,46 @@ input:checked ~ ul {
     animation: stepUp 1s ease-in-out forwards;
 }
 
-
+/*CONTACT SECTION*/
+#contact {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2em;
+}
+#contact form {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+#contact input, #contact textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--blue);
+    font-family: var(--font);
+}
+#contact button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+/*FOOTER SECTION*/
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+footer a {
+    color: var(--blue);
+    text-decoration: underline;
+}
+footer p {
+    padding-bottom: 0.5rem;
+}
 /* MEDIA QUERIES (MEDIUM) */ 
-
+@media screen and (min-width: 600px) {
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -322,7 +397,7 @@ input:checked ~ ul {
     .bar-chart {
         width: 50%;
     }
-
+    }
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1000px){
   nav ul {
