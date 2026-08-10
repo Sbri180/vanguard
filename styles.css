@@ -106,6 +106,11 @@ h2{
     font-family: var(--font);
     font-weight: bold;
     padding: 2rem;
+    animation: slideDown 1s ease-out forwards;
+
+}
+ #innovation button{
+     animation: slideDown 1s ease-out forwards;
 }
 h3{
     font-size: 1.25em;
@@ -166,11 +171,7 @@ button {
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-   left: 0px;
-   top: 0px;
-   animation-name: move;
-   animation-duration: 3s;
-
+    animation: float 10s ease-in-out infinite;
 }
 /* NAVIGATION STYLES */
 nav{
@@ -209,6 +210,11 @@ nav li a {
   color: var(--blue);
   transition: background-color .3s ease-in;
 }
+nav li a:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
 
 nav label {
     cursor: pointer;
@@ -216,7 +222,6 @@ nav label {
     padding: 1.5rem;
     user-select: none;
 }
-
 label span {
     background-color: white;
     display: block;
@@ -272,15 +277,14 @@ padding:10px;
   backdrop-filter:blur(10px);
   
 }
-#innovation button {
+button {
    transition: all 100ms ease-in-out;
 }
-#innovation button:hover {
+button:hover {
     background-color: var(--red);
     color: var(--white);
     font-size: 1.25rem;
     border-radius: 10px;
-    
 }
 /*About Section*/
 #about{
@@ -298,7 +302,10 @@ padding:10px;
     background-color: var(--blue);
     padding: 1rem;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+#services .card:hover {
+    transform: translateY(-10px);}
 /* Results Section */
 #results {
   background-color: var(--blue);
@@ -376,6 +383,32 @@ tbody tr:nth-child(even) {
     animation: stepUp 1s ease-in-out forwards;
 }
 /*Animations*/
+/*floating Icon*/
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/*Appearing text*/
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /*CONTACT SECTION*/
 #contact {
@@ -400,6 +433,12 @@ tbody tr:nth-child(even) {
     padding: 0.5rem 1rem;
     cursor: pointer;
     width: 100%;
+}
+#contact button:hover {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.25rem;
+    border-radius: 10px;
 }
 /*FOOTER SECTION*/
 footer {
