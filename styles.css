@@ -166,6 +166,10 @@ button {
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+   left: 0px;
+   top: 0px;
+   animation-name: move;
+   animation-duration: 3s;
 
 }
 /* NAVIGATION STYLES */
@@ -371,6 +375,7 @@ tbody tr:nth-child(even) {
 .bar {
     animation: stepUp 1s ease-in-out forwards;
 }
+/*Animations*/
 
 /*CONTACT SECTION*/
 #contact {
